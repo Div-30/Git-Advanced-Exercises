@@ -44,3 +44,32 @@ create mode 100644 [test1.md](http://test1.md/)
 create mode 100644 [test2.md](http://test2.md/)
 Successfully rebased and updated refs/heads/main.
 gymtwiyubake@Twiyubakes-iMac Git-Advanced % git log`
+
+## Challenge 4: **Splitting a Commit**
+
+This challenge explores the use of git reset to refine a project’s commit history by splitting a single commit into multiple, distinct ones for improved clarity and tracking.
+
+`gymtwiyubake@Twiyubakes-iMac Git-Advanced % touch test5 test6`
+
+`gymtwiyubake@Twiyubakes-iMac Git-Advanced % git add test5 test6`
+
+`gymtwiyubake@Twiyubakes-iMac Git-Advanced % git commit -m "Create test 5 and test 6"
+[main 6e83c59] Create test 5 and test 6
+2 files changed, 0 insertions(+), 0 deletions(-)
+create mode 100644 test5
+create mode 100644 test6
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % git reset --soft HEAD^
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % git reset
+Unstaged changes after reset:
+D       index.html
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % git add test5
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % git commit -m "Create Test 5"
+[main 0bbe208] Create Test 5
+1 file changed, 0 insertions(+), 0 deletions(-)
+create mode 100644 test5
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % git add test6`
+
+`gymtwiyubake@Twiyubakes-iMac Git-Advanced % git commit -m "Create Test 6"
+[main cdbe2c8] Create Test 6
+1 file changed, 0 insertions(+), 0 deletions(-)
+create mode 100644 test6`
