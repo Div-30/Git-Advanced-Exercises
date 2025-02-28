@@ -27,3 +27,7 @@ gymtwiyubake@Twiyubakes-iMac Git-Advanced % git commit -m "Added [test4.md](http
 `[main 5dbdd2a] Added [test4.md](http://test4.md/) file
 1 file changed, 0 insertions(+), 0 deletions(-)
 create mode 100644 [test4.md](http://test4.md/)`
+
+## Challenge 2: Editing Commit History
+
+This challenge focuses on refining commit messages to ensure they remain clear and accurate throughout a project's history. For instance, we updated the commit message from the vague "Create another file" to the more precise "Create second file," better reflecting the action taken.
