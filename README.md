@@ -80,10 +80,10 @@ This challenge involves using Git’s interactive rebasing with the squash comma
 
 PS C:\Users\Divin Paul\Documents\Git-Advanced-Exercises\Git-Advanced-Exercises> git rebase -i HEAD~2
 [detached HEAD ecf3f41] Create test 5 and test 6
- Date: Mon Mar 3 11:46:33 2025 +0200
- 2 files changed, 2 insertions(+)
- create mode 100644 test5.md
- create mode 100644 test6.md
+Date: Mon Mar 3 11:46:33 2025 +0200
+2 files changed, 2 insertions(+)
+create mode 100644 test5.md
+create mode 100644 test6.md
 Successfully rebased and updated refs/heads/main.
 PS C:\Users\Divin Paul\Documents\Git-Advanced-Exercises\Git-Advanced-Exercises> git log --oneline
 ecf3f41 (HEAD -> main) Create test 5 and test 6
