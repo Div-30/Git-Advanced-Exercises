@@ -73,3 +73,27 @@ gymtwiyubake@Twiyubakes-iMac Git-Advanced % git add test6`
 [main cdbe2c8] Create Test 6
 1 file changed, 0 insertions(+), 0 deletions(-)
 create mode 100644 test6`
+
+## Challenge 5: **Advanced Squashing**
+
+This challenge involves using Git’s interactive rebasing with the squash command to combine the last two commits, "Create test 5" and "Create test 6" into a single commit named "Create test 5 and test 6."
+
+PS C:\Users\Divin Paul\Documents\Git-Advanced-Exercises\Git-Advanced-Exercises> git rebase -i HEAD~2
+[detached HEAD ecf3f41] Create test 5 and test 6
+ Date: Mon Mar 3 11:46:33 2025 +0200
+ 2 files changed, 2 insertions(+)
+ create mode 100644 test5.md
+ create mode 100644 test6.md
+Successfully rebased and updated refs/heads/main.
+PS C:\Users\Divin Paul\Documents\Git-Advanced-Exercises\Git-Advanced-Exercises> git log --oneline
+ecf3f41 (HEAD -> main) Create test 5 and test 6
+cfb443d Update README.md
+50fe6ee Update README.md
+3ec5ec8 Update README.md
+766049f Create README.md
+fe60d0f Delete index.html
+5dbdd2a Added test4.md file
+399cc9d chore: Create third and fourth files
+e0dab20 chore: Create another file
+6f96695 chore: Create initial file
+ed3f4a6 Initial commit
