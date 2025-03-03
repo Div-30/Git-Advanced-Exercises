@@ -97,3 +97,24 @@ fe60d0f Delete index.html
 e0dab20 chore: Create another file
 6f96695 chore: Create initial file
 ed3f4a6 Initial commit
+
+## Challenge 6: **Dropping a Commit**
+
+This challenge revolves around mastering the use of git rebase -i, a powerful Git command that allows you to interactively modify your commit history.
+
+PS C:\Users\Divin Paul\Documents\Git-Advanced-Exercises\Git-Advanced-Exercises> git rebase -i ecf3f41
+Successfully rebased and updated refs/heads/main.
+PS C:\Users\Divin Paul\Documents\Git-Advanced-Exercises\Git-Advanced-Exercises> git log --oneline     
+1018f50 (HEAD -> main) Update README.md
+56e1ec1 Update README.md
+ecf3f41 Create test 5 and test 6
+cfb443d Update README.md
+50fe6ee Update README.md
+3ec5ec8 Update README.md
+766049f Create README.md
+fe60d0f Delete index.html
+5dbdd2a Added test4.md file
+399cc9d chore: Create third and fourth files
+e0dab20 chore: Create another file
+6f96695 chore: Create initial file
+ed3f4a6 Initial commit
