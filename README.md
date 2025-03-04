@@ -119,10 +119,28 @@ e0dab20 chore: Create another file
 6f96695 chore: Create initial file
 ed3f4a6 Initial commit
 
-## Challenge 7: **Cherry-Picking Commits**
+## Challenge 7: **Reordering Commits**
 
 This challenge focuses on mastering git rebase -i to manipulate Git commit history. It’s about exploring how to rearrange commits in a repository using interactive rebase.
 The goal is to understand and apply this command to reorder commits effectively.
 
 gymtwiyubake@Twiyubakes-iMac Git-Advanced % git rebase -i HEAD~3    
 Successfully rebased and updated refs/heads/main.
+
+## Challenge 8: **Cherry-Picking Commits**
+
+The "Cherry-Picking Commits" challenge involves creating a branch called ft/branch, adding a file test5.md, and committing it with the message "Implemented test 5". And then switch back to the main branch and use git cherry-pick to selectively apply that specific commit to main.
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % git checkout -b ft/branch
+Switched to a new branch 'ft/branch'
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % echo "This is test 5 content" > test5.md
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % git add test5.md
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % git commit -m "Implemented test 5"
+[ft/branch 09b1bcc] Implemented test 5
+1 file changed, 1 insertion(+)
+create mode 100644 test5.md
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % git checkout main
+Switched to branch 'main'
+Your branch and 'origin/main' have diverged,
+and have 6 and 20 different commits each, respectively.
+(use "git pull" to merge the remote branch into yours)
+
