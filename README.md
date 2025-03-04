@@ -118,3 +118,11 @@ fe60d0f Delete index.html
 e0dab20 chore: Create another file
 6f96695 chore: Create initial file
 ed3f4a6 Initial commit
+
+## Challenge 7: **Cherry-Picking Commits**
+
+This challenge focuses on mastering git rebase -i to manipulate Git commit history. It’s about exploring how to rearrange commits in a repository using interactive rebase.
+The goal is to understand and apply this command to reorder commits effectively.
+
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % git rebase -i HEAD~3    
+Successfully rebased and updated refs/heads/main.
