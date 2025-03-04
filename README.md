@@ -144,3 +144,55 @@ Your branch and 'origin/main' have diverged,
 and have 6 and 20 different commits each, respectively.
 (use "git pull" to merge the remote branch into yours)
 
+## Challenge 9: **Visualizing Commit History (Bonus)**
+
+This challenge i explored using tools like git log --graph or a graphical Git client that can help visualize your commit history.
+
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % git log --graph
+* commit 230264b224f66c485257b78f36d88f526f72c02b (HEAD -> main)
+| Author: Div-30 <divinpaul88@gmail.com>
+| Date:   Tue Mar 4 11:03:43 2025 +0200
+| 
+|     Implemented test 5
+| 
+* commit 8d09434f4dd1711f47e3a6c97d7f1802ffdcffb6
+| Author: Div-30 <divinpaul88@gmail.com>
+| Date:   Tue Mar 4 10:45:11 2025 +0200
+| 
+|     Updating
+| 
+* commit cdbe2c8bc02c43ceb018447e2a2c8d8e262b8287
+| Author: Div-30 <divinpaul88@gmail.com>
+| Date:   Fri Feb 28 14:52:02 2025 +0200
+| 
+|     Create Test 6
+| 
+* commit 0bbe20866cd357a9a78b7d6ce253cec9c76267ca
+| Author: Div-30 <divinpaul88@gmail.com>
+| Date:   Fri Feb 28 14:51:45 2025 +0200
+| 
+|     Create Test 5
+| 
+* commit 01fa30f039469b33f99f0b7639d408f40c9a6396
+| Author: Div-30 <divinpaul88@gmail.com>
+| Date:   Wed Feb 26 11:35:25 2025 +0200
+| 
+|     Added test4.md file
+| 
+* commit 12f42671409bb12c077c77531358dbf41cfe79ab
+| Author: Div-30 <divinpaul88@gmail.com>
+| Date:   Wed Feb 26 11:32:15 2025 +0200
+| 
+|     chore: Create third and fourth files
+| 
+* commit 18a1f97a2549ed90a0207b700258e96e2930846e
+| Author: Div-30 <divinpaul88@gmail.com>
+| Date:   Wed Feb 26 11:31:42 2025 +0200
+| 
+|     chore: Create initial file and second file
+| 
+* commit ed3f4a6e0ceb96a1539ca644c608ddee15cbd77b
+  Author: Div-30 <divinpaul88@gmail.com>
+
+  
+
