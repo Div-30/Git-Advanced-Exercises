@@ -218,5 +218,15 @@ gymtwiyubake@Twiyubakes-iMac Git-Advanced % git log --graph
 ## Challenge 10: **Checking Out Detached HEAD**
 
 The "Understanding Reflogs (Bonus)" challenge involves learning how Git reflogs track the history of branch and HEAD updates in the repository.
+
+
+# PART 2 CHALLENGES
+
+## Challenge 1: **Feature Branch Creation**
+
+
+
+
+
   
 
