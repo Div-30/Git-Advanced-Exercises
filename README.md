@@ -303,5 +303,10 @@ cdbe2c8 Create Test 6
 18a1f97 chore: Create initial file and second file
 ed3f4a6 Initial commit
 ```
-  
+
+
+  ## Challenge 4: **Local vs. Remote Branches**
+
+  This challenge introduces the concept of local and remote branches in Git. Local branches exist on your machine, while remote branches are stored on a platform like GitHub.You learn to push a local branch to a remote repository using git push.You also practice pulling remote changes to 
+  your local branch with git pull.
 
