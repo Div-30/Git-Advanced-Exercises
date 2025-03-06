@@ -223,10 +223,47 @@ The "Understanding Reflogs (Bonus)" challenge involves learning how Git reflogs 
 # PART 2 CHALLENGES
 
 ## Challenge 1: **Feature Branch Creation**
+This challenge involves creating a new Git branch named ft/new-feature to work on a specific feature in isolation. You start by ensuring your repository has an initial commit on the main branch, then use git checkout -b ft/new-feature to create and switch to the new branch.
 
+```
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % git checkout -b feature-branch
+Switched to a new branch 'feature-branch'
+```
 
+## Challenge 2: **Working on the Feature Branch**
+This challenge involves working on a Git feature branch.
+I created a file named feature.txt, added content, and committed it with a descriptive message.
 
+```
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % touch feature.txt
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % git add feature.txt
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % git status
+On branch feature-branch
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   feature.txt
 
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        index.html
+
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % git commit -m "Implemented core functionality for new feature"
+[feature-branch 1456f8a] Implemented core functionality for new feature
+ 1 file changed, 1 insertion(+)
+ create mode 100644 feature.txt
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % git log --oneline
+1456f8a (HEAD -> feature-branch) Implemented core functionality for new feature
+230264b (main) Implemented test 5
+8d09434 Updating
+cdbe2c8 Create Test 6
+0bbe208 Create Test 5
+01fa30f Added test4.md file
+12f4267 chore: Create third and fourth files
+18a1f97 chore: Create initial file and second file
+ed3f4a6 Initial commit
+```
+
+## Challenge 3: **Switching Back and Making More Changes**
 
   
 
