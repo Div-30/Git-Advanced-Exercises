@@ -264,6 +264,44 @@ ed3f4a6 Initial commit
 ```
 
 ## Challenge 3: **Switching Back and Making More Changes**
+This challenge focuses on switching between Git branches during development.You  can switch to the main branch and create a readme.txt file with introductory content.The task ends with committing the changes using the message "Updated project readme."
 
+```
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % git checkout main
+Switched to branch 'main'
+Your branch and 'origin/main' have diverged,
+and have 7 and 20 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % git branch
+  feature-branch
+  ft/branch
+* main
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % touch readme.txt
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % git add readme.txt
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % git status
+On branch main
+Your branch and 'origin/main' have diverged,
+and have 7 and 20 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   readme.txt
+
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % git commit -m "updated project readme"
+[main d78fbd4] updated project readme
+ 1 file changed, 3 insertions(+)
+ create mode 100644 readme.txt
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % git log --oneline
+d78fbd4 (HEAD -> main) updated project readme
+230264b Implemented test 5
+8d09434 Updating
+cdbe2c8 Create Test 6
+0bbe208 Create Test 5
+01fa30f Added test4.md file
+12f4267 chore: Create third and fourth files
+18a1f97 chore: Create initial file and second file
+ed3f4a6 Initial commit
+```
   
 
