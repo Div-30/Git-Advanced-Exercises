@@ -310,3 +310,38 @@ ed3f4a6 Initial commit
   This challenge introduces the concept of local and remote branches in Git. Local branches exist on your machine, while remote branches are stored on a platform like GitHub.You learn to push a local branch to a remote repository using git push.You also practice pulling remote changes to 
   your local branch with git pull.
 
+   ## Challenge 5: **Branch Deletion**
+
+   This challenge teaches you to clean up a Git repository by deleting a feature branch.
+   You start by merging the ft/new-feature branch (or ft/branch in your case) into main.
+   Then, you delete the branch locally using git branch -d after ensuring its changes are integrated.
+
+   ```
+git checkout -b ft/new-feature
+Switched to a new branch 'ft/new-feature'
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % echo "Some feature content" > feature.txt
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % git add feature.txt
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % git commit -m "Added feature content"
+[ft/new-feature 1628e3a] Added feature content
+ 1 file changed, 1 insertion(+)
+ create mode 100644 feature.txt
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % git checkout main
+Switched to branch 'main'
+Your branch and 'origin/main' have diverged,
+and have 8 and 20 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % git merge ft/new-feature
+Updating d78fbd4..1628e3a
+Fast-forward
+ feature.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 feature.txt
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % git branch
+  feature-branch
+  ft/branch
+  ft/new-feature
+* main
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % git branch -d ft/new-feature
+Deleted branch ft/new-feature (was 1628e3a).
+   ```
+
