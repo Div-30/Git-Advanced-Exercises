@@ -486,3 +486,106 @@ gymtwiyubake@Twiyubakes-iMac Git-Advanced % git branch
 * ft/improved-branch-name
   main
 ```
+
+## Challenge 10: **Checking Out Detached HEAD**
+
+```
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % git log --oneline
+c6c398d (HEAD -> ft/improved-branch-name, main) Merge branch 'ft/new-branch-from-commit'
+61f5057 Added new feature content
+1c79e1f Test commit 1
+1628e3a Added feature content
+d78fbd4 updated project readme
+230264b Implemented test 5
+8d09434 Updating
+cdbe2c8 Create Test 6
+0bbe208 Create Test 5
+01fa30f Added test4.md file
+12f4267 chore: Create third and fourth files
+18a1f97 chore: Create initial file and second file
+ed3f4a6 Initial commit
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % git checkout 1c79e1f 
+Note: switching to '1c79e1f'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 1c79e1f Test commit 1
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % git branch
+* (HEAD detached at 1c79e1f)
+  feature-branch
+  ft/branch
+  ft/improved-branch-name
+  main
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % git log --oneline
+1c79e1f (HEAD) Test commit 1
+1628e3a Added feature content
+d78fbd4 updated project readme
+230264b Implemented test 5
+8d09434 Updating
+cdbe2c8 Create Test 6
+0bbe208 Create Test 5
+01fa30f Added test4.md file
+12f4267 chore: Create third and fourth files
+18a1f97 chore: Create initial file and second file
+ed3f4a6 Initial commit
+```
+
+# PART 2 CHALLENGES
+
+## Challenge 1: **Stashing Changes**
+
+
+
+```
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % git checkout main
+Previous HEAD position was 1c79e1f Test commit 1
+Switched to branch 'main'
+Your branch and 'origin/main' have diverged,
+and have 12 and 20 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % echo "Work in progress" > file.txt
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % git add file.txt
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % echo "More work" > another.txt
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % git status 
+On branch main
+Your branch and 'origin/main' have diverged,
+and have 12 and 20 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   file.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        another.txt
+
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % git stash
+Saved working directory and index state WIP on main: c6c398d Merge branch 'ft/new-branch-from-commit'
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % git status
+On branch main
+Your branch and 'origin/main' have diverged,
+and have 12 and 20 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        another.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % git stash list
+stash@{0}: WIP on main: c6c398d Merge branch 'ft/new-branch-from-commit'
+```
