@@ -468,3 +468,21 @@ gymtwiyubake@Twiyubakes-iMac Git-Advanced % git log --oneline --graph
 * 18a1f97 chore: Create initial file and second file
 * ed3f4a6 Initial commit
 ```
+
+## Challenge 9: **Renaming Branches**
+
+This challenge focuses on renaming a Git branch to improve its descriptiveness.You use git branch -m ft/new-branch-from-commit ft/improved-branch-name to change the branch name.
+
+```
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % git branch
+  feature-branch
+  ft/branch
+* ft/new-branch-from-commit
+  main
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % git branch -m ft/new-branch-from-commit ft/improved-branch-name
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % git branch
+  feature-branch
+  ft/branch
+* ft/improved-branch-name
+  main
+```
