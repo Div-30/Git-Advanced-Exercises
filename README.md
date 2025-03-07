@@ -347,6 +347,8 @@ Deleted branch ft/new-feature (was 1628e3a).
 
    ## Challenge 6: **Creating a Branch from a Commit**
 
+   This challenge is about creating a Git branch from a specific point in my commit history. I  used git checkout -b ft/new-branch-from-commit with a commit hash to start the branch ft/new-branch-from-commit.
+
 ```
    gymtwiyubake@Twiyubakes-iMac Git-Advanced % git log --oneline
 1c79e1f (HEAD -> main) Test commit 1
