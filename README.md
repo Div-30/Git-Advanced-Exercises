@@ -444,6 +444,8 @@ gymtwiyubake@Twiyubakes-iMac Git-Advanced % git log --oneline --graph
 
 ## Challenge 8: **Branch Rebasing**
 
+This challenge introduces rebasing as a way to integrate a feature branch into main in Git. You rebase ft/new-branch-from-commit onto main using git rebase, placing its commits on top of main’s latest commit.
+
 ```
 gymtwiyubake@Twiyubakes-iMac Git-Advanced % git checkout ft/new-branch-from-commit
 Switched to branch 'ft/new-branch-from-commit'
