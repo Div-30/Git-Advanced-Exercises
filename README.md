@@ -413,3 +413,56 @@ gymtwiyubake@Twiyubakes-iMac Git-Advanced % git log --oneline --graph
 * 18a1f97 chore: Create initial file and second file
 * ed3f4a6 Initial commit
 ```
+
+## Challenge 7: **Branch Merging**
+
+This challenge introduces rebasing as a way to integrate a feature branch into main in Git. You rebase ft/new-branch-from-commit onto main using git rebase, placing its commits on top of main’s latest commit.
+
+```
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % git merge ft/new-branch-from-commit
+Merge made by the 'ort' strategy.
+ newfeature.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 newfeature.txt
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % git log --oneline --graph
+*   c6c398d (HEAD -> main) Merge branch 'ft/new-branch-from-commit'
+|\  
+| * 61f5057 (ft/new-branch-from-commit) Added new feature content
+* | 1c79e1f Test commit 1
+* | 1628e3a Added feature content
+|/  
+* d78fbd4 updated project readme
+* 230264b Implemented test 5
+* 8d09434 Updating
+* cdbe2c8 Create Test 6
+* 0bbe208 Create Test 5
+* 01fa30f Added test4.md file
+* 12f4267 chore: Create third and fourth files
+* 18a1f97 chore: Create initial file and second file
+* ed3f4a6 Initial commit
+```
+
+## Challenge 8: **Branch Rebasing**
+
+```
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % git checkout ft/new-branch-from-commit
+Switched to branch 'ft/new-branch-from-commit'
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % git rebase main
+Successfully rebased and updated refs/heads/ft/new-branch-from-commit.
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % git log --oneline --graph
+*   c6c398d (HEAD -> ft/new-branch-from-commit, main) Merge branch 'ft/new-branch-from-commit'
+|\  
+| * 61f5057 Added new feature content
+* | 1c79e1f Test commit 1
+* | 1628e3a Added feature content
+|/  
+* d78fbd4 updated project readme
+* 230264b Implemented test 5
+* 8d09434 Updating
+* cdbe2c8 Create Test 6
+* 0bbe208 Create Test 5
+* 01fa30f Added test4.md file
+* 12f4267 chore: Create third and fourth files
+* 18a1f97 chore: Create initial file and second file
+* ed3f4a6 Initial commit
+```
