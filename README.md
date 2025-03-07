@@ -543,11 +543,11 @@ cdbe2c8 Create Test 6
 ed3f4a6 Initial commit
 ```
 
-# PART 2 CHALLENGES
+# PART 3 CHALLENGES
 
 ## Challenge 1: **Stashing Changes**
 
-
+This challenge involves using git stash to temporarily save uncommitted changes on the main branch.It simulates needing to pause work for an urgent task without losing your progress.
 
 ```
 gymtwiyubake@Twiyubakes-iMac Git-Advanced % git checkout main
