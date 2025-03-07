@@ -489,6 +489,8 @@ gymtwiyubake@Twiyubakes-iMac Git-Advanced % git branch
 
 ## Challenge 10: **Checking Out Detached HEAD**
 
+This challenge explores the concept of a detached HEAD in Git, where HEAD points to a commit instead of a branch. You use git checkout <commit-hash> to detach HEAD and work at a specific point in history.
+
 ```
 gymtwiyubake@Twiyubakes-iMac Git-Advanced % git log --oneline
 c6c398d (HEAD -> ft/improved-branch-name, main) Merge branch 'ft/new-branch-from-commit'
@@ -588,4 +590,42 @@ Untracked files:
 nothing added to commit but untracked files present (use "git add" to track)
 gymtwiyubake@Twiyubakes-iMac Git-Advanced % git stash list
 stash@{0}: WIP on main: c6c398d Merge branch 'ft/new-branch-from-commit'
+```
+
+## Challenge 2: **Retrieving Stashed Changes**
+
+This challenge focuses on retrieving previously stashed changes to resume work on the main branch.You use git stash pop to apply the most recent stash and remove it from the stash stack.
+
+```
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % git stash pop
+On branch main
+Your branch and 'origin/main' have diverged,
+and have 12 and 20 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   file.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        another.txt
+
+Dropped refs/stash@{0} (f7b450bcbfa611ea2a9d3d51142afefc95d5fe48)
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % git status
+On branch main
+Your branch and 'origin/main' have diverged,
+and have 12 and 20 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   file.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        another.txt
+
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % git stash list
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % 
 ```
