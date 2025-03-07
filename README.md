@@ -345,3 +345,26 @@ gymtwiyubake@Twiyubakes-iMac Git-Advanced % git branch -d ft/new-feature
 Deleted branch ft/new-feature (was 1628e3a).
    ```
 
+   ## Challenge 6: **Creating a Branch from a Commit**
+
+```
+   gymtwiyubake@Twiyubakes-iMac Git-Advanced % git log --oneline
+1c79e1f (HEAD -> main) Test commit 1
+1628e3a Added feature content
+d78fbd4 updated project readme
+230264b Implemented test 5
+8d09434 Updating
+cdbe2c8 Create Test 6
+0bbe208 Create Test 5
+01fa30f Added test4.md file
+12f4267 chore: Create third and fourth files
+18a1f97 chore: Create initial file and second file
+ed3f4a6 Initial commit
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % git checkout -b ft/new-branch-from-commit d78fbd4
+Switched to a new branch 'ft/new-branch-from-commit'
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % git branch
+  feature-branch
+  ft/branch
+* ft/new-branch-from-commit
+  main
+```
