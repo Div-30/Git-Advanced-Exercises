@@ -762,3 +762,81 @@ gymtwiyubake@Twiyubakes-iMac Git-Advanced % git commit
 ```
 
 ## Challenge 5: **Understanding Detached HEAD State**
+This challenge involves detaching HEAD state in Git, where HEAD points to a commit instead of a branch.
+
+```
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % git checkout 315f4cd
+Note: switching to '315f4cd'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 315f4cd Main change
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % git branch
+* (HEAD detached at 315f4cd)
+  feature-branch
+  ft/branch
+  ft/conflict-branch
+  ft/improved-branch-name
+  main
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % echo "detached work" > temp.txt
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % git add temp.txt
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % git commit -m "detached commit"
+[detached HEAD 56513b0] detached commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 temp.txt
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % git checkout main
+Warning: you are leaving 1 commit behind, not connected to
+any of your branches:
+
+  56513b0 detached commit
+
+If you want to keep it by creating a new branch, this may be a good time
+to do so with:
+
+ git branch <new-branch-name> 56513b0
+
+Switched to branch 'main'
+Your branch and 'origin/main' have diverged,
+and have 18 and 20 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % git checkout -b ft/detached-work  #
+fatal: '#' is not a commit and a branch 'ft/detached-work' cannot be created from it
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % git checkout -b ft/detached-work   
+Switched to a new branch 'ft/detached-work'
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % git log--oneline 
+git: 'log--oneline' is not a git command. See 'git --help'.
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % git log --oneline
+0104c15 (HEAD -> ft/detached-work, main) Merge branch 'ft/conflict-branch'
+b43d000 (ft/conflict-branch) Feature change
+315f4cd Main change
+2c890ba Merge branch 'ft/conflict-branch'
+1546465 Added main branch change
+d32b57a Added feature branch change
+c6c398d (ft/improved-branch-name) Merge branch 'ft/new-branch-from-commit'
+61f5057 Added new feature content
+1c79e1f Test commit 1
+1628e3a Added feature content
+d78fbd4 updated project readme
+230264b Implemented test 5
+8d09434 Updating
+cdbe2c8 Create Test 6
+0bbe208 Create Test 5
+01fa30f Added test4.md file
+12f4267 chore: Create third and fourth files
+18a1f97 chore: Create initial file and second file
+ed3f4a6 Initial commit
+
+```
