@@ -708,3 +708,57 @@ gymtwiyubake@Twiyubakes-iMac Git-Advanced % git log --oneline --graph
 * 18a1f97 chore: Create initial file and second file
 * ed3f4a6 Initial commit
 ```
+
+## Challenge 4: **Resolving Merge Conflicts with a Merge Tool**
+This challenge explores using git mergetool to resolve merge conflicts visually and efficiently. You simulate or handle a conflict, then launch a merge tool to compare and edit conflicting files.
+```
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % git config --global merge.tool meld
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % git checkout main
+Already on 'main'
+Your branch and 'origin/main' have diverged,
+and have 15 and 20 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % echo "Main version" > conflict.txt
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % git add conflict.txt
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % git commit -m "Main change"
+[main 315f4cd] Main change
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % git checkout -b ft/conflict-branch
+fatal: a branch named 'ft/conflict-branch' already exists
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % git checkout conflict-branch
+error: pathspec 'conflict-branch' did not match any file(s) known to git
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % git checkout ft/conflict-branch
+Switched to branch 'ft/conflict-branch'
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % git add conflict.txt
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % git commit -m "Feature change"
+[ft/conflict-branch b43d000] Feature change
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % git checkout main
+Switched to branch 'main'
+Your branch and 'origin/main' have diverged,
+and have 16 and 20 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % git merge ft/conflict-branch
+Auto-merging conflict.txt
+CONFLICT (content): Merge conflict in conflict.txt
+Automatic merge failed; fix conflicts and then commit the result.
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % git mergetool
+Merging:
+conflict.txt
+
+Normal merge conflict for 'conflict.txt':
+  {local}: modified file
+  {remote}: modified file
+The merge tool meld is not available as 'meld'
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % git commit
+U       conflict.txt
+error: Committing is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % git add conflict.txt
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % git commit
+[main 0104c15] Merge branch 'ft/conflict-branch'
+```
+
+## Challenge 5: **Understanding Detached HEAD State**
