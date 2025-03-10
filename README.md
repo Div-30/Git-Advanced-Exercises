@@ -629,3 +629,82 @@ Untracked files:
 gymtwiyubake@Twiyubakes-iMac Git-Advanced % git stash list
 gymtwiyubake@Twiyubakes-iMac Git-Advanced % 
 ```
+
+## Challenge 3: **Branch Merging Conflicts (Continued)**
+This challenge involves simulating and resolving a merge conflict between main and a feature branch in Git. I created conflicting changes in the same file on both branches and merged and manually fixed the conflicts.
+
+```
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % git checkout -b ft/conflict-branch
+Switched to a new branch 'ft/conflict-branch'
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % echo "Feature branch version" > conflict.txt
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % git add conflict.txt
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % git commit -m "Added feature branch change"
+[ft/conflict-branch d32b57a] Added feature branch change
+ 2 files changed, 2 insertions(+)
+ create mode 100644 conflict.txt
+ create mode 100644 file.txt
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % git checkout main 
+Switched to branch 'main'
+Your branch and 'origin/main' have diverged,
+and have 12 and 20 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % echo "Main branch version" > conflict.txt
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % git add conflict.txt
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % git commit -m "Added main branch change"
+[main 1546465] Added main branch change
+ 1 file changed, 1 insertion(+)
+ create mode 100644 conflict.txt
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % git merge ft/conflict.txt
+merge: ft/conflict.txt - not something we can merge
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % git merge ft/conflic-branch 
+merge: ft/conflic-branch - not something we can merge
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % git merge ft/conflict-branch
+Auto-merging conflict.txt
+CONFLICT (add/add): Merge conflict in conflict.txt
+Automatic merge failed; fix conflicts and then commit the result.
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % git status
+On branch main
+Your branch and 'origin/main' have diverged,
+and have 13 and 20 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Changes to be committed:
+        new file:   file.txt
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both added:      conflict.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        another.txt
+
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % git add conflict.txt
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % git commit
+[main 2c890ba] Merge branch 'ft/conflict-branch'
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % git log --oneline --graph
+*   2c890ba (HEAD -> main) Merge branch 'ft/conflict-branch'
+|\  
+| * d32b57a (ft/conflict-branch) Added feature branch change
+* | 1546465 Added main branch change
+|/  
+*   c6c398d (ft/improved-branch-name) Merge branch 'ft/new-branch-from-commit'
+|\  
+| * 61f5057 Added new feature content
+* | 1c79e1f Test commit 1
+* | 1628e3a Added feature content
+|/  
+* d78fbd4 updated project readme
+* 230264b Implemented test 5
+* 8d09434 Updating
+* cdbe2c8 Create Test 6
+* 0bbe208 Create Test 5
+* 01fa30f Added test4.md file
+* 12f4267 chore: Create third and fourth files
+* 18a1f97 chore: Create initial file and second file
+* ed3f4a6 Initial commit
+```
