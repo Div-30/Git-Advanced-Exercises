@@ -840,3 +840,54 @@ cdbe2c8 Create Test 6
 ed3f4a6 Initial commit
 
 ```
+
+## Challenge 6: **Ignoring Files/Directories**
+This challenge is about creating a .gitignore file to specify the exclusions.
+
+```
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % touch .gitignore
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % echo "/tmp" >> .gitignore
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % mkdir tmp 
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % touch tmp.txt
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % git status
+On branch ft/detached-work
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+        another.txt
+        conflict_BACKUP_2824.txt
+        conflict_BASE_2824.txt
+        conflict_LOCAL_2824.txt
+        conflict_REMOTE_2824.txt
+        tmp.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % git add .gitignore
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % git commit -m "Added /tmp to .gitignore"
+[ft/detached-work 9618a3b] Added /tmp to .gitignore
+ 1 file changed, 1 insertion(+)
+ create mode 100644 .gitignore
+```
+
+## Challenge 7: **Working with Tags**
+This challenge involves how to use Git tags, which mark important points in the repository's history.
+```
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % git checkout main
+Switched to branch 'main'
+Your branch and 'origin/main' have diverged,
+and have 18 and 20 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % git tag v1.0
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % git tag
+v1.0
+gymtwiyubake@Twiyubakes-iMac Git-Advanced % git push origin v1.0
+Enumerating objects: 52, done.
+Counting objects: 100% (52/52), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (40/40), done.
+Writing objects: 100% (52/52), 4.41 KiB | 4.41 MiB/s, done.
+Total 52 (delta 18), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (18/18), done.
+To https://github.com/Div-30/Git-Advanced-Exercises.git
+ * [new tag]         v1.0 -> v1.0
+```
